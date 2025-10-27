@@ -1,7 +1,11 @@
+
 pipeline{
     agent any
     environment{
         PYTHON = 'C:\\Users\\sanyu\\AppData\\Local\\Programs\\Python\\Python313\\python.exe'
+    }
+    triggers {
+        cron("*/2 * * * *")
     }
      stages{
             stage('Checkout Code'){
